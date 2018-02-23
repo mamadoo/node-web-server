@@ -54,6 +54,13 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects Page",
+    welcomeMessage: "welcome to portfolio"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "Unable to fullfil this request."
